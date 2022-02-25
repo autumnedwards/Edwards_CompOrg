@@ -13,3 +13,7 @@ mflo $t3 #storing the whole number portion to the register t3
 mult $t2, $t3 #multiply the whole number portion by 11
 mflo $t2 #storing the low 32 bits to register t2
 sub $t3, $t1-$t2 # 2992633 - 2992627 (final step of finding the mod) and storing it in register t3
+#the process of finding the modulo which is the number of times the program runs is completed
+
+startloop:
+  bgt $t0, $t3, exitloop #when t0 is greater than the modulus stop the loop
