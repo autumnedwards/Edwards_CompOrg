@@ -13,3 +13,7 @@ mult $t2, $t3 #multiply the whole number portion by 11
 mflo $t4 #storing the low 32 bits to register t2
 sub $t5, $t1, $t4 # 2992633 - 2992627 (final step of finding the mod) and storing it in register t3
 #the process of finding the modulo which is the number of times the program runs is completed
+
+startloop:
+  	bgez $t0, $t5, exitloop #when t0 is greater than the modulus stop the loop
+  	la $a0, hello #loading the address hello(which is the string that we implemented 
