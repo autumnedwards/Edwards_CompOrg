@@ -17,3 +17,8 @@ sub $t3, $t1-$t2 # 2992633 - 2992627 (final step of finding the mod) and storing
 
 startloop:
   bgt $t0, $t3, exitloop #when t0 is greater than the modulus stop the loop
+  a $a0, hello #loading the address hello(which is the string that we implemented in the data section)
+	li $v0, 4 #through the system call 4 the address will print
+	syscall #this just means system call
+  
+  
