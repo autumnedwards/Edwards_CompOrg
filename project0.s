@@ -22,3 +22,6 @@ startloop:
 	  addi $t0,$t0, 1 #incrementing the variable stored in register t0 
 	  j startloop
 exitloop:
+
+li $v0, 10 #system call for exit
+syscall 
