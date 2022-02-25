@@ -18,10 +18,10 @@ sub $t5, $t1, $t4 # 2992633 - 2992627 (final step of finding the mod) and storin
 startloop:
   	beq $t0, $t5, exitloop #when t0 is greater than the modulus stop the loop
   	la $a0, hello #loading the address hello(which is the string that we implemented in the data section)
-	  li $v0, 4 #through the system call 4 the address will print
-	  syscall #this just means system call
-	  addi $t0,$t0, 1 #incrementing the variable stored in register t0 
-	  j startloop
+	li $v0, 4 #through the system call 4 the address will print
+	syscall #this just means system call
+	addi $t0,$t0, 1 #incrementing the variable stored in register t0 
+	j startloop
 exitloop:
 
 li $v0, 10 #system call for exit
