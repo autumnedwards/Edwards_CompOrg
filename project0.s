@@ -24,5 +24,6 @@ startloop:
 	j startloop
 exitloop:
 	
-  
+li $v0, 10 #system call for exit
+syscall 	
   
