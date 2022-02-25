@@ -3,3 +3,10 @@
 #include <cstring>
 using namespace std;
 
+int main()
+{
+    int t0,t1,t2,t3;
+    t0=0;
+    t1=2992633;
+    t2=11;
+    t3=t1%t2;
