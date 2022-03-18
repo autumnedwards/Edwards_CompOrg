@@ -5,7 +5,7 @@
 main:
 
 #section for reading the characters from the string
-addi, $v0, $0, 8 #system call code for reading a string in MIPS is 8
+addi $v0, $0, 8 #system call code for reading a string in MIPS is 8
 la $a0, instruct #a0 register set to the location in memory to which the computer will record the input
 li $a1, 11 # i want to read 10 characters so I se a1 to 10+1
 syscall 
@@ -22,21 +22,26 @@ li $t6, 10 #loading the number 10 to the t6 register
 sub $t7,$t5,$t6 #loading the value of N-10 to register t7
 
 #section for loading bytes from the string to a specific register
-lb $s0, 0($a0)
-lb $s1, 1($a0)
-lb $s2, 2($a0)
-lb $s3, 3($a0)
-lb $s4, 4($a0)
-lb $s5, 5($a0)
-lb $s6, 6($a0)
-lb $s7, 7($a0)
-lb $t8, 8($a0)
-lb $t9, 9($a0)
+#lb $s0, 0($a0)
+#lb $s1, 1($a0)
+#lb $s2, 2($a0)
+#lb $s3, 3($a0)
+#lb $s4, 4($a0)
+#lb $s5, 5($a0)
+#lb $s6, 6($a0)
+#lb $s7, 7($a0)
+#lb $t8, 8($a0)
+#lb $t9, 9($a0)
 
 
 #section for reading characters that are 0-9
 
-readInt:
+#create incrementing variable for loop
+
+
+begin:
+
+
 
 
  
