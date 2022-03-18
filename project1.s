@@ -10,6 +10,7 @@ la $a0, instruct #a0 register set to the location in memory to which the compute
 li $a1, 11 # i want to read 10 characters so I se a1 to 10+1
 syscall 
 
+
 #section for finding X, M and N
 li, $t1,2992633 #loading my id to the register t1
 li, $t2, 11 #loading the number 11 to the register t2
@@ -20,7 +21,18 @@ add $t5,$t4,$t3 #adding the modulo of my id and 26 and storing it in the t5 regi
 li $t6, 10 #loading the number 10 to the t6 register
 sub $t7,$t5,$t6 #loading the value of N-10 to register t7
 
+#section for loading bytes from the string to a specific register
+lb $s0, 0($a0)
+lb $s1, 1($a0)
 
+
+#section for reading characters that are 0-9
+
+readInt:
+
+
+ 
+ 
 
 
 
