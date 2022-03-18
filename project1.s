@@ -1,13 +1,13 @@
 .data
   instruct: .asciiz "Enter 10 characters" #instructing the user to enter a string of 10 characters 
-  .space 11 #allocating 10 bytes for the string b/c 1 character = 1 byte + the \n
+  userInput: .space 12 #allocating 12 bytes for the string b/c 1 character = 1 byte plus 2 extra bytes
 .text
 main:
 
 #section for reading the characters from the string
 addi, $v0, $0, 8 #system call code for reading a string in MIPS is 8
 la $a0, instruct #a0 register set to the location in memory to which the computer will record the input
-li $a1, 10 # setting the max number of characters that should be read in 
+li $a1, 11 # i want to read 10 characters so I se a1 to 10+1
 syscall 
 
 #section for finding X, M and N
