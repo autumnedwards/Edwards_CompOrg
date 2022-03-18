@@ -32,7 +32,7 @@ sub $t7,$t5,$t6 #loading the value of N-10 to register t7
 
 
 #create a sum variable for adding the single- digit base N numbers 
-addi $t3,$zero,$0
+addi $t3,$0,0
 
 #create incrementing variable for loop
 move $t0,$0 #assigning the value 0 to register t0
