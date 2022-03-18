@@ -21,26 +21,17 @@ add $t5,$t4,$t3 #adding the modulo of my id and 26 and storing it in the t5 regi
 li $t6, 10 #loading the number 10 to the t6 register
 sub $t7,$t5,$t6 #loading the value of N-10 to register t7
 
-#section for loading bytes from the string to a specific register
-#lb $s0, 0($a0)
-#lb $s1, 1($a0)
-#lb $s2, 2($a0)
-#lb $s3, 3($a0)
-#lb $s4, 4($a0)
-#lb $s5, 5($a0)
-#lb $s6, 6($a0)
-#lb $s7, 7($a0)
-#lb $t8, 8($a0)
-#lb $t9, 9($a0)
 
-
-#section for reading characters that are 0-9
+#create a sum variable for adding the single- digit base N numbers 
+addi $t3
 
 #create incrementing variable for loop
-
+move $t0,$0 #assigning the value 0 to register t0
 
 begin:
+lb $t2, t0($a0)
 
+blt $t2, $t5, yes
 
 
 
