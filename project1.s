@@ -42,10 +42,11 @@ addi $t0, $t0, 1 #incrementing the value in t0
 bne $t0, 9, begin #if the iterator has not read all 10 characters keep going
 
 
+#print sum
+li $v0, 1
+move $a0,$t3
+syscall 
  
- 
-
-
 
 #syscall for ending the program
 li $v0, 10 
