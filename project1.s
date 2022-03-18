@@ -33,11 +33,13 @@ lb $t2, t0($a0)
 #if the character is less than the the base N number then jump to yes
 blt $t2, $t5, yes
 addi $t2, $zero, $0 #adds zero as the value if the blt is not satisfied 
-addi $t0, $t0, 1 #incrementing the value in t0
+
 
 
 yes:
-
+addi $t3, $t3, $t2
+addi $t0, $t0, 1 #incrementing the value in t0
+bne $t0, 9, begin #if the iterator has not read all 10 characters keep going
 
 
  
