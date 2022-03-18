@@ -4,7 +4,10 @@
 .text
 main:
 
-addi, $v0, $0, 8 #system call code for a reading a string in MIPS is 8
+addi, $v0, $0, 8 #system call code for reading a string in MIPS is 8
 la $a0, instruct #a0 register set to the location in memory to which the computer will record the input
 li $a1, 10 # setting the max number of characters that should be read in 
+syscall 
+
+li $v0, 10 #syscall to end the program 
 syscall 
