@@ -28,6 +28,8 @@ lb $s2, 2($a0)
 lb $s3, 3($a0)
 lb $s4, 4($a0)
 lb $s5, 5($a0)
+lb $s6, 6($a0)
+lb $s7, 7($a0)
 
 
 #section for reading characters that are 0-9
