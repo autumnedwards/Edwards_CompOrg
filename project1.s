@@ -23,15 +23,20 @@ sub $t7,$t5,$t6 #loading the value of N-10 to register t7
 
 
 #create a sum variable for adding the single- digit base N numbers 
-addi $t3
+addi $t3,$zero,$0
 
 #create incrementing variable for loop
 move $t0,$0 #assigning the value 0 to register t0
 
 begin:
 lb $t2, t0($a0)
-
+#if the character is less than the the base N number then jump to yes
 blt $t2, $t5, yes
+addi $t2, $zero, $0 #adds zero as the value if the blt is not satisfied 
+addi $t0, $t0, 1 #incrementing the value in t0
+
+
+yes:
 
 
 
