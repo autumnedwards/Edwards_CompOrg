@@ -4,14 +4,18 @@
 .text
 main:
 
-#section for reading the characters from the string
+# getting user's input as text
 addi $v0, $0, 8 #system call code for reading a string in MIPS is 8
-la $a0, instruct #a0 register set to the location in memory to which the computer will record the input
+la $a0, userInput #a0 register set to the location in memory to which the computer will record the input
 li $a1, 11 # i want to read 10 characters so I se a1 to 10+1
 syscall 
 
+#displays "enter 10 characters"
+li $v0, 4
+la $a0, message
+syscall
 
-#section for finding X, M and N
+#finding X, M and N
 li, $t1,2992633 #loading my id to the register t1
 li, $t2, 11 #loading the number 11 to the register t2
 div $t1,$t2 #dividing my id number by the number 11
