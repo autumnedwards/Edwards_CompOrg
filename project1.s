@@ -24,6 +24,10 @@ sub $t7,$t5,$t6 #loading the value of N-10 to register t7
 #section for loading bytes from the string to a specific register
 lb $s0, 0($a0)
 lb $s1, 1($a0)
+lb $s2, 2($a0)
+lb $s3, 3($a0)
+lb $s4, 4($a0)
+lb $s5, 5($a0)
 
 
 #section for reading characters that are 0-9
