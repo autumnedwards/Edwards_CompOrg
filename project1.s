@@ -9,5 +9,10 @@ la $a0, instruct #a0 register set to the location in memory to which the compute
 li $a1, 10 # setting the max number of characters that should be read in 
 syscall 
 
+li, $t1,2992633 #loading my id to the register t1
+li, $t2, 11 #loading the number 11 to the register t2
+div $t1,$t2 #dividing my id number by the number 11
+mfhi $t3 #storing the modulo portion to the register t3
+
 li $v0, 10 #syscall to end the program 
 syscall 
