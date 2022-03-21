@@ -16,9 +16,9 @@ li $a1, 11 # i want to read 10 characters so I se a1 to 10+1
 syscall 
 
 #displays the input
-li $v0,4
-la $a0, userInput
-syscall
+#li $v0,4
+#la $a0, userInput
+#syscall
 
 #finding X, M and N
 li, $t1,2992633 #loading my id to the register t1
