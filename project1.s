@@ -44,18 +44,18 @@ addi $t3,$0,0
 #create incrementing variable for loop
 move $t0,$0 #assigning the value 0 to register t0
 
-begin:
-lb $t2, t0($a0)
+#begin:
+lb $t2, 0($a0)
 #if the character is less than the the base N number then jump to yes
 blt $t2, $t5, yes
 addi $t2, $zero, 0 #adds zero as the value if the blt is not satisfied 
 
-
-
 yes:
 add $t3, $t3, $t2
-addi $t0, $t0, 1 #incrementing the value in t0
-bne $t0, 9, begin #if the iterator has not read all 10 characters keep going
+
+lb $t2, 1($a0)
+#if the character is less than the the base N number then jump to yes
+blt $t2, $t5, yes
 
 
 #print sum
