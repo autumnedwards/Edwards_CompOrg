@@ -48,7 +48,7 @@ begin:
 lb $t2, t0($a0)
 #if the character is less than the the base N number then jump to yes
 blt $t2, $t5, yes
-addi $t2, $zero, $0 #adds zero as the value if the blt is not satisfied 
+addi $t2, $zero, 0 #adds zero as the value if the blt is not satisfied 
 
 
 
