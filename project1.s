@@ -77,6 +77,11 @@ lb $t2, 4($a0)
 blt $t2, $t5, yes
 bge $t2, $t5, no
 
+lb $t2, 5($a0)
+blt $t2, $t5, yes
+bge $t2, $t5, no
+
+
 
 #print sum
 li $v0, 1
