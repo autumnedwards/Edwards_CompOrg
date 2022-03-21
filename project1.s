@@ -22,6 +22,11 @@ li $v0, 4
 la $a0, input
 syscall
 
+#displays the input values
+li $v0, 4
+la $a0, userInput
+syscall
+
 #finding X, M and N
 li, $t1,2992633 #loading my id to the register t1
 li, $t2, 11 #loading the number 11 to the register t2
