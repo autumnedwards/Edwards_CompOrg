@@ -59,18 +59,23 @@ bge $t2, $t5, no
 
 lb $t2, 1($a0)
 blt $t2, $t5, yes
+bge $t2, $t5, no
 
 lb $t2, 2($a0)
 blt $t2, $t5, yes
+bge $t2, $t5, no
 
 lb $t2, 3($a0)
 blt $t2, $t5, yes
+bge $t2, $t5, no
 
 lb $t2, 3($a0)
 blt $t2, $t5, yes
+bge $t2, $t5, no
 
 lb $t2, 4($a0)
 blt $t2, $t5, yes
+bge $t2, $t5, no
 
 
 #print sum
