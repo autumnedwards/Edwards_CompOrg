@@ -12,7 +12,7 @@ syscall
 
 #displays "enter 10 characters"
 li $v0, 4
-la $a0, message
+la $a0, instruct
 syscall
 
 #displays the input
