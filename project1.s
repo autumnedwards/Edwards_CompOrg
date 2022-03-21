@@ -57,6 +57,12 @@ lb $t2, 1($a0)
 #if the character is less than the the base N number then jump to yes
 blt $t2, $t5, yes
 
+lb $t2, 2($a0)
+blt $t2, $t5, yes
+
+lb $t2, 3($a0)
+blt $t2, $t5, yes
+
 
 #print sum
 li $v0, 1
