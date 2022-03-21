@@ -93,6 +93,10 @@ lb $t2, 8($a0)
 blt $t2, $t5, yes
 bge $t2, $t5, no
 
+lb $t2, 9($a0)
+blt $t2, $t5, yes
+bge $t2, $t5, no
+
 #print sum
 li $v0, 1
 move $a0,$t3
