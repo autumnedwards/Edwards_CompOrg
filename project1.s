@@ -44,14 +44,14 @@ addi $t3,$0,0
 #create incrementing variable for loop
 move $t0,$0 #assigning the value 0 to register t0
 
+yes:
+add $t3, $t3, $t2
+
 #begin:
 lb $t2, 0($a0)
 #if the character is less than the the base N number then jump to yes
 blt $t2, $t5, yes
-addi $t2, $zero, 0 #adds zero as the value if the blt is not satisfied 
-
-yes:
-add $t3, $t3, $t2
+addi $t3, $t2, 0 #adds zero as the value if the blt is not satisfied 
 
 lb $t2, 1($a0)
 #if the character is less than the the base N number then jump to yes
@@ -61,6 +61,12 @@ lb $t2, 2($a0)
 blt $t2, $t5, yes
 
 lb $t2, 3($a0)
+blt $t2, $t5, yes
+
+lb $t2, 3($a0)
+blt $t2, $t5, yes
+
+lb $t2, 4($a0)
 blt $t2, $t5, yes
 
 
