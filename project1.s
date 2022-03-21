@@ -47,14 +47,17 @@ move $t0,$0 #assigning the value 0 to register t0
 yes:
 add $t3, $t3, $t2
 
+no:
+addi $t3, $t2, 0 #adds zero as the value if the blt is not satisfied 
+
 #begin:
 lb $t2, 0($a0)
 #if the character is less than the the base N number then jump to yes
 blt $t2, $t5, yes
-addi $t3, $t2, 0 #adds zero as the value if the blt is not satisfied 
+#if the character is greater than or equal to the base number N the jump to no
+bge $t2, $t5, no
 
 lb $t2, 1($a0)
-#if the character is less than the the base N number then jump to yes
 blt $t2, $t5, yes
 
 lb $t2, 2($a0)
