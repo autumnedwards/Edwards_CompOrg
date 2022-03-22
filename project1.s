@@ -51,51 +51,13 @@ no:
 addi $t3, $t2, 0 #adds zero as the value if the blt is not satisfied 
 
 #begin:
-lb $t2, 0($a0)
+lb $t2, $t0($a0)
+
 #if the character is less than the the base N number then jump to yes
 blt $t2, $t5, yes
 #if the character is greater than or equal to the base number N the jump to no
 bge $t2, $t5, no
 
-lb $t2, 1($a0)
-blt $t2, $t5, yes
-bge $t2, $t5, no
-
-lb $t2, 2($a0)
-blt $t2, $t5, yes
-bge $t2, $t5, no
-
-lb $t2, 3($a0)
-blt $t2, $t5, yes
-bge $t2, $t5, no
-
-lb $t2, 3($a0)
-blt $t2, $t5, yes
-bge $t2, $t5, no
-
-lb $t2, 4($a0)
-blt $t2, $t5, yes
-bge $t2, $t5, no
-
-lb $t2, 5($a0)
-blt $t2, $t5, yes
-bge $t2, $t5, no
-
-lb $t2, 6($a0)
-blt $t2, $t5, yes
-bge $t2, $t5, no
-
-lb $t2, 7($a0)
-blt $t2, $t5, yes
-bge $t2, $t5, no
-
-lb $t2, 8($a0)
-blt $t2, $t5, yes
-bge $t2, $t5, no
-
-lb $t2, 9($a0)
-blt $t2, $t5, yes
-bge $t2, $t5, no
 
 #displays "\output:"
 li $v0, 4
