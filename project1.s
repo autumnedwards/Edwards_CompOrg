@@ -55,8 +55,15 @@ lb $t2, $t0($a0)
 
 #if the character is less than the the base N number then jump to yes
 blt $t2, $t5, yes
+
 #if the character is greater than or equal to the base number N the jump to no
 bge $t2, $t5, no
+
+#iterate the counter
+addi $t0,$t0,1  
+
+#check to see if the loop should stop
+bne $t0, 9, begin
 
 
 #displays "\output:"
