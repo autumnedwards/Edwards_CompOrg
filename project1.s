@@ -44,20 +44,25 @@ addi $t3,$0,0
 #create incrementing variable for loop
 move $t0,$0 #assigning the value 0 to register t0
 
-yes:
-add $t3, $t3, $t2
-
-no:
-addi $t3, $t2, 0 #adds zero as the value if the blt is not satisfied 
 
 #begin:
-lb $t2, $t0($a0)
+#lb $t2, $t0($a0)
+
+#changing the syntax of this line 
+add $t2, $t0, $a0
+lb $t2, ($t2)
 
 #if the character is less than the the base N number then jump to yes
 blt $t2, $t5, yes
 
 #if the character is greater than or equal to the base number N the jump to no
 bge $t2, $t5, no
+
+yes:
+add $t3, $t3, $t2
+
+no:
+addi $t3, $t2, 0 #adds zero as the value if the blt is not satisfied 
 
 #iterate the counter
 addi $t0,$t0,1  
