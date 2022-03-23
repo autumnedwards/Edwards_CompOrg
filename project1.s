@@ -45,7 +45,7 @@ addi $t3,$0,0
 move $t0,$0 #assigning the value 0 to register t0
 
 
-#begin:
+begin:
 #lb $t2, $t0($a0)
 
 #changing the syntax of this line 
