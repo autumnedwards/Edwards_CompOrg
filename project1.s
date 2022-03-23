@@ -1,13 +1,13 @@
 .data
-  instruct: .asciiz  #instructing the user to enter a string of 10 characters 
+  instruct: .asciiz "\n" #instructing the user to enter a string of 10 characters 
   userInput: .space 12 #allocating 12 bytes for the string b/c 1 character = 1 byte plus 2 extra bytes
 .text
 main:
 
-#displays "enter 10 characters\n"
-#li $v0, 4
-#la $a0, instruct
-#syscall
+displays "enter 10 characters\n"
+li $v0, 4
+la $a0, instruct
+syscall
 
 # getting user's input as text
 addi $v0, $0, 8 #system call code for reading a string in MIPS is 8
