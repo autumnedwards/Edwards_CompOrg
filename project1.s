@@ -1,15 +1,13 @@
 .data
-  instruct: .asciiz "Enter 10 characters\n" #instructing the user to enter a string of 10 characters 
+  instruct: .asciiz  #instructing the user to enter a string of 10 characters 
   userInput: .space 12 #allocating 12 bytes for the string b/c 1 character = 1 byte plus 2 extra bytes
-  input: .asciiz "\nInput:" #used to display the input
-  output: .asciiz "\nOutput:" #used to display the output
 .text
 main:
 
 #displays "enter 10 characters\n"
-li $v0, 4
-la $a0, instruct
-syscall
+#li $v0, 4
+#la $a0, instruct
+#syscall
 
 # getting user's input as text
 addi $v0, $0, 8 #system call code for reading a string in MIPS is 8
@@ -18,14 +16,14 @@ li $a1, 11 # i want to read 10 characters so I se a1 to 10+1
 syscall 
 
 #displays "\ninput:"
-li $v0, 4
-la $a0, input
-syscall
+#li $v0, 4
+#la $a0, input
+#syscall
 
 #displays the input values
-li $v0, 4
-la $a0, userInput
-syscall
+#li $v0, 4
+#la $a0, userInput
+#syscall
 
 #finding X, M and N
 li, $t1,2992633 #loading my id to the register t1
@@ -72,9 +70,9 @@ bne $t0, 9, begin
 
 
 #displays "\output:"
-li $v0, 4
-la $a0, output
-syscall
+#li $v0, 4
+#la $a0, output
+#syscall
 
 #print sum
 li $v0, 1
