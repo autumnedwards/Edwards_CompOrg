@@ -1,10 +1,10 @@
 .data
-  instruct: .asciiz "\n" #instructing the user to enter a string of 10 characters 
+  instruct: .asciiz " " #instructing the user to enter a string of 10 characters 
   userInput: .space 12 #allocating 12 bytes for the string b/c 1 character = 1 byte plus 2 extra bytes
 .text
 main:
 
-#displays "enter 10 characters\n"
+#displays " "
 li $v0, 4
 la $a0, instruct
 syscall
@@ -15,15 +15,6 @@ la $a0, userInput #a0 register set to the location in memory to which the comput
 li $a1, 11 # i want to read 10 characters so I se a1 to 10+1
 syscall 
 
-#displays "\ninput:"
-#li $v0, 4
-#la $a0, input
-#syscall
-
-#displays the input values
-#li $v0, 4
-#la $a0, userInput
-#syscall
 
 #finding X, M and N
 li, $t1,2992633 #loading my id to the register t1
@@ -68,11 +59,10 @@ addi $t0,$t0,1
 #check to see if the loop should stop
 bne $t0, 9, begin
 
+li $v0, 4
+la $a0, new
+syscall
 
-#displays "\output:"
-#li $v0, 4
-#la $a0, output
-#syscall
 
 #print sum
 li $v0, 1
