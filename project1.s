@@ -4,7 +4,7 @@
 .text
 main:
 
-displays "enter 10 characters\n"
+#displays "enter 10 characters\n"
 li $v0, 4
 la $a0, instruct
 syscall
