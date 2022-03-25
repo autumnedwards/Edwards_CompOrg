@@ -61,6 +61,10 @@ Pnumber:
 bge $t2,$t4,integer
 blt $t2, $t4, returnZero
 
+Puppercase:
+bge $t2,$t6,uppercase
+blt $t2, $t6, returnZero
+
 
 #iterate the counter
 addi $t0,$t0,1  
