@@ -1,6 +1,7 @@
 .data
   instruct: .asciiz " " #instructing the user to enter a string of 10 characters 
   userInput: .space 12 #allocating 12 bytes for the string b/c 1 character = 1 byte plus 2 extra bytes
+  new line: .asciiz "\n"
 .text
 main:
 
@@ -28,10 +29,10 @@ sub $t7,$t5,$t6 #loading the value of N-10 to register t7
 
 
 #create a sum variable for adding the single- digit base N numbers 
-addi $t3,$0,0
+li $t3, 0
 
 #create incrementing variable for loop
-move $t0,$0 #assigning the value 0 to register t0
+li $t0,0 #assigning the value 0 to register t0
 
 
 begin:
