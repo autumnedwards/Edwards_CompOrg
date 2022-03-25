@@ -65,6 +65,9 @@ Puppercase:
 bge $t2,$t6,uppercase
 blt $t2, $t6, returnZero
 
+Plowercase:
+bge $t2,$t8,lowercase 
+blt $t2, $t8, returnZero
 
 #iterate the counter
 addi $t0,$t0,1  
