@@ -57,7 +57,9 @@ ble $t2,$t7,Puppercase #if the value of t2 is less than 87 or equal to go to pos
 ble $t2,$t9,Plowercase #if the value of t2 is less than or equal to 119 go to possible lowercase
 bgt $t2, $t9, returnZero #if the value of t2 is greater than 118 go to return zero
 
-
+Pnumber:
+bge $t2,$t4,integer
+blt $t2, $t4, returnZero
 
 
 #iterate the counter
