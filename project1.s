@@ -38,7 +38,8 @@ addi $t4, $0, 48
 addi $t5, $0, 57
 addi $t6, $0, 65
 addi $t7, $0, 87
-
+addi $t8, $0, 97
+addi $t9, $0, 119
 
 begin:
 #lb $t2, $t0($a0)
@@ -47,23 +48,18 @@ begin:
 add $t2, $t0, $a0
 lb $t2, ($t2)
 
-#if the character is less than the the base N number then jump to yes
-blt $t2, $t5, yes
+#numbers 0-9 (greater than or equal to 48 AND less than or equal to 57)(between 47 and 58)
+#letters A-W (uppercase) (greater than or equal to 65 AND less than or equal to 87)(between 64 and 88)
+#letters a-w (lowercase) (greater than or equal to 97 AND less than or equal to 119)(between 96 and 120)
 
-#if the character is greater than or equal to the base number N the jump to no
-bge $t2, $t5, no
 
-yes:
-add $t3, $t3, $t2
 
-no:
-addi $t3, $t2, 0 #adds zero as the value if the blt is not satisfied 
 
 #iterate the counter
 addi $t0,$t0,1  
 
 #check to see if the loop should stop
-bne $t0, 9, begin
+bne $t0, 10, begin
 
 li $v0, 4
 la $a0, new
