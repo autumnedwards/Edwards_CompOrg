@@ -1,7 +1,7 @@
 .data
   instruct: .asciiz " " #instructing the user to enter a string of 10 characters 
   userInput: .space 12 #allocating 12 bytes for the string b/c 1 character = 1 byte plus 2 extra bytes
-  new line: .asciiz "\n"
+  newline: .asciiz "\n"
 .text
 main:
 
@@ -95,7 +95,7 @@ addi $t0,$t0,1
 bne $t0, 10, begin
 
 li $v0, 4
-la $a0, new
+la $a0, newline
 syscall
 
 
