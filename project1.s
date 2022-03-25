@@ -69,6 +69,11 @@ Plowercase:
 bge $t2,$t8,lowercase 
 blt $t2, $t8, returnZero
 
+integer:
+addi $t2, $t2, -48 #subtracts 48 to get integer from 0-9
+j sum
+
+
 #iterate the counter
 addi $t0,$t0,1  
 
