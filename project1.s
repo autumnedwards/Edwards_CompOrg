@@ -81,6 +81,13 @@ lowercase:
 addi $t2, $t2, -87 #subtracts 87 to get values from 10-32 for lowercase letters 
 j sum
 
+returnZero:
+sub $t2, $t2, $t2
+j sum
+
+sum:
+add $t3, $t3, $t2
+
 #iterate the counter
 addi $t0,$t0,1  
 
