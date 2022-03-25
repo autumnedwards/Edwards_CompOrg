@@ -77,6 +77,9 @@ uppercase:
 addi $t2, $t2, -55 #subtracts 55 to get values from 10-32 for uppercase letters
 j sum
 
+lowercase:
+addi $t2, $t2, -87 #subtracts 87 to get values from 10-32 for lowercase letters 
+j sum
 
 #iterate the counter
 addi $t0,$t0,1  
