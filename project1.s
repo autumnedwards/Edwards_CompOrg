@@ -34,6 +34,11 @@ li $t3, 0
 #create incrementing variable for loop
 li $t0,0 #assigning the value 0 to register t0
 
+addi $t4, $0, 48
+addi $t5, $0, 57
+addi $t6, $0, 65
+addi $t7, $0, 87
+
 
 begin:
 #lb $t2, $t0($a0)
