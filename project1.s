@@ -20,7 +20,7 @@ mfhi $t3 #storing the modulo portion to the register t3
 li $t4, 26 #loading the number 26 to register t4
 add $t5,$t4,$t3 #adding the modulo of my id and 26 and storing it in the t5 register
 li $t6, 10 #loading the number 10 to the t6 register
-sub $t7,$t5,$t6 #loading the value of N-10 to register t7
+sub $t1,$t5,$t6 #loading the value of N-10 to register t7
 
 
 #create a sum variable for adding the single- digit base N numbers 
@@ -32,9 +32,15 @@ li $t0,0 #assigning the value 0 to register t0
 addi $t4, $0, 48
 addi $t5, $0, 57
 addi $t6, $0, 65
-addi $t7, $0, 87
+#addi $t7, $0, 87
 addi $t8, $0, 97
-addi $t9, $0, 119
+#addi $t9, $0, 119
+
+#adding the lower bound for uppercase to M to get the range
+add $t7, $t6, $t1
+
+#adding the lower bound for uppercase to M to get the range
+add $t9, $t8, $t1
 
 begin:
 #lb $t2, $t0($a0)
