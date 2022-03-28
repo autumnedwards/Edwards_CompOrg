@@ -50,13 +50,13 @@ add $t2, $t0, $a0
 lb $t2, ($t2)
 
 #numbers 0-9 (greater than or equal to 48 AND less than or equal to 57)(between 47 and 58)
-#letters A-W (uppercase) (greater than or equal to 65 AND less than or equal to 87)(between 64 and 88)
-#letters a-w (lowercase) (greater than or equal to 97 AND less than or equal to 119)(between 96 and 120)
+#letters A-V (uppercase) (greater than or equal to 65 AND less than or equal to 86)(between 64 and 87)
+#letters a-v (lowercase) (greater than or equal to 97 AND less than or equal to 118)(between 96 and 119)
 
 ble $t2,$t5,Pnumber #if the value of t2 is less than or equal to 57 go to possible number
-ble $t2,$t7,Puppercase #if the value of t2 is less than 87 or equal to go to possible uppercase
-ble $t2,$t9,Plowercase #if the value of t2 is less than or equal to 119 go to possible lowercase
-bgt $t2, $t9, returnZero #if the value of t2 is greater than 118 go to return zero
+blt $t2,$t7,Puppercase #if the value of t2 is less than 87 or equal to go to possible uppercase
+blt $t2,$t9,Plowercase #if the value of t2 is less than or equal to 119 go to possible lowercase
+bge $t2, $t9, returnZero #if the value of t2 is greater than 118 go to return zero
 
 Pnumber:
 bge $t2,$t4,integer
